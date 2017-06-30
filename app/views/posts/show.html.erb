@@ -10,4 +10,12 @@
   <p class="body">
   <%= @post.body %>
   </p>
+  <div id="comment">
+    <h2><%= @post.comments.count%> Comments</h2>
+    <hr>
+    <%= render @post.comments%>
+    <hr>
+    <h3>Add a comment</h3>
+    <%= render 'comments/form'%>
+  </div>
 </div>
